@@ -20,10 +20,10 @@ const HeroSection = () => {
         <section className="mt-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
             {location?.map((loc) => {
                 return(
-                    <Link href={`/${loc.id}`} key={loc.id}>
-                        <article className="mb-4 md:mx-2">
+                    <article className="mb-4 md:mx-2">
                             <Carousel images={loc.pictures}/>
                             <div className="flex flex-col my-3">
+                            <Link href={`/${loc.id}`} key={loc.id}>
                                 <div className="flex justify-between">
                                     <h1 className="font-semibold text-base">{loc.title}</h1>
                                     <div className="flex items-center text-base">
@@ -35,9 +35,9 @@ const HeroSection = () => {
                                     <p>{loc.location}</p>
                                     <p>By {loc.host.name}</p>
                                 </div>
+                            </Link>
                             </div>
                         </article>
-                    </Link>
                 )
             })}
         </section>
