@@ -24,7 +24,7 @@ const aboutArray: IAbout[] = [{
 
 const About = () => {
     return(
-        <section className="flex flex-col items-center pt-8">
+        <section className="flex flex-col items-center py-8">
             {aboutArray.map((abt:{title:string, description:string}, index:any) => {
                 return(
                     <div className="text-center w-full odd:bg-[#F3F3F3] p-20" key={index}>

@@ -20,28 +20,28 @@ const Carousel = ({images}: IPictures) => {
       <>
         <div className="relative h-[400px] md:h-[350px] flex justify-center overflow-hidden">
           {length === 1 ? (
-            <>
-              <div className="w-full h-[400px] md:h-[350px] flex items-center justify-center">
-                <img
-                  className="rounded-lg h-[100%] object-cover"
-                  src={images}
-                  alt=""
-                />
-              </div>
-            </>
+              <>
+                <div className="w-full h-[400px] md:h-[350px] flex items-center justify-center">
+                  <img
+                    className="rounded-lg h-[100%] object-cover"
+                    src={images}
+                    alt=""
+                  />
+                </div>
+              </>
           ) : (
             <>
               <div className="w-full relative h-[400px] md:h-[350px] mb-4 flex items-center justify-center">
-                <img
-                  className="rounded-lg h-[100%] w-full object-fill "
-                  src={images[currentSlide]}
-                  alt=""
-                />
+                  <img
+                    className="rounded-lg h-[100%] w-full object-fill "
+                    src={images[currentSlide]}
+                    alt=""
+                  />
               </div>
-              <div className="h-7 w-7 flex justify-center items-center rounded-full bg-slate-500 absolute top-1/2 right-0">
+              <div className="h-7 w-7 flex justify-center items-center rounded-full bg-slate-500 absolute top-1/2 right-2">
                 <ChevronRight color="white" size={18} onClick={nextSlide}/>
               </div>
-              <div className="h-7 w-7 flex justify-center items-center rounded-full  bg-slate-500 absolute top-1/2 left-0 ">
+              <div className="h-7 w-7 flex justify-center items-center rounded-full  bg-slate-500 absolute top-1/2 left-2 ">
                 <ChevronLeft color="white" size={18} onClick={prevSlide} />
               </div>
             </>
